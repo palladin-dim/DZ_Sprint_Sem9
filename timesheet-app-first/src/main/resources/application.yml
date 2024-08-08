@@ -1,0 +1,29 @@
+# spring.application.name=timesheet
+# spring.datasource.url=jdbc:h2:mem:test
+# spring.datasource.username=sa
+# spring.datasource.password=
+
+server:
+  port: 3333
+spring:
+  application:
+    name: timesheet-app-first
+  datasource:
+    # url: jdbc:postgresql://localhost:5432/timesheets_db
+    url: jdbc:h2:mem:test
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  jpa:
+    show-sql: true
+  #    hibernate:
+  #      ddl-auto: validate
+
+  main:
+    allow-bean-definition-overriding: true
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    preferIpAddress: true
